@@ -4,6 +4,6 @@ public interface MathematicalExpressionEvaluator {
 
 	boolean canEvaluate(String expression);
 	
-	int eval(String expression);
+	int evaluate(String expression);
 	
 }

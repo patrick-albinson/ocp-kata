@@ -1,22 +1,10 @@
 package patrick.ocp;
 
-
 import static org.junit.Assert.assertEquals;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.junit.Test;
 
 public class CalculatorTest {
-	
-	public static void main(String[] args) {
-		Pattern pattern = Pattern.compile("(\\d+) \\+ (\\d+)");
-		Matcher m = pattern.matcher("9 + 3");
-		System.out.println(m.matches());
-		System.out.println(m.group(1));
-		System.out.println(m.group(2));
-	}
 
 	@Test
 	public void treatingWhitespaceAsZero() {
@@ -57,5 +45,5 @@ public class CalculatorTest {
 		assertEquals(2, calc.eval("6 / 3"));
 		assertEquals(3, calc.eval("36 / 12"));
 	}
-	
+
 }

@@ -1,6 +1,8 @@
-package patrick.ocp;
+package patrick.ocp.evaluators;
 
 import java.util.regex.Pattern;
+
+import patrick.ocp.MathematicalExpressionEvaluator;
 
 public class WhitespaceEvaluator implements MathematicalExpressionEvaluator {
 
@@ -10,7 +12,7 @@ public class WhitespaceEvaluator implements MathematicalExpressionEvaluator {
 		return PATTERN.matcher(expression).matches();
 	}
 
-	public int eval(String expression) {
+	public int evaluate(String expression) {
 		return 0;
 	}
 	
