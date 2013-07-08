@@ -5,18 +5,18 @@ import java.util.List;
 
 public class Calculator {
 
-	private List<MathematicalExpressionHandler> supportedOperations = new ArrayList<MathematicalExpressionHandler>();
+	private List<MathematicalExpressionEvaluator> supportedOperations = new ArrayList<MathematicalExpressionEvaluator>();
 
 	public int eval(String expression) {
-		for (MathematicalExpressionHandler operation : supportedOperations) {
-			if (operation.canHandle(expression)) {
+		for (MathematicalExpressionEvaluator operation : supportedOperations) {
+			if (operation.canEvaluate(expression)) {
 				return operation.eval(expression);
 			}
 		}
 		throw new UnsupportedOperationException("Unable to evaluate expression '" + expression + "'");
 	}
 
-	public void addOperation(MathematicalExpressionHandler operation) {
+	public void addOperation(MathematicalExpressionEvaluator operation) {
 		supportedOperations.add(operation);
 	}
 

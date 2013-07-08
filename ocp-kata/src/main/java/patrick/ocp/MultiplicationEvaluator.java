@@ -5,11 +5,11 @@ import static java.lang.Integer.parseInt;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DivisionOperation implements MathematicalExpressionHandler {
+public class MultiplicationEvaluator implements MathematicalExpressionEvaluator {
 
-	private static final Pattern PATTERN = Pattern.compile("(\\d+) / (\\d+)");
+	private static final Pattern PATTERN = Pattern.compile("(\\d+) \\* (\\d+)");
 
-	public boolean canHandle(String expression) {
+	public boolean canEvaluate(String expression) {
 		return PATTERN.matcher(expression).matches();
 	}
 
@@ -18,7 +18,7 @@ public class DivisionOperation implements MathematicalExpressionHandler {
 		if (matcher.matches()) {
 			int firstOperand = parseInt(matcher.group(1));
 			int secondOperand = parseInt(matcher.group(2));
-			return firstOperand / secondOperand;
+			return firstOperand * secondOperand;
 		}
 		throw new IllegalArgumentException("Unable to evaluate expression '" + expression + "'");
 	}

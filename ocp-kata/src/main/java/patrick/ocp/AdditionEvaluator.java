@@ -5,11 +5,11 @@ import static java.lang.Integer.parseInt;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class AdditionOperation implements MathematicalExpressionHandler {
+public class AdditionEvaluator implements MathematicalExpressionEvaluator {
 
 	private static final Pattern PATTERN = Pattern.compile("(\\d+) \\+ (\\d+)");
 
-	public boolean canHandle(String expression) {
+	public boolean canEvaluate(String expression) {
 		return PATTERN.matcher(expression).matches();
 	}
 

@@ -2,11 +2,11 @@ package patrick.ocp;
 
 import java.util.regex.Pattern;
 
-public class ZeroOperandOperation implements MathematicalExpressionHandler {
+public class WhitespaceEvaluator implements MathematicalExpressionEvaluator {
 
 	private static final Pattern PATTERN = Pattern.compile("\\s*");
 
-	public boolean canHandle(String expression) {
+	public boolean canEvaluate(String expression) {
 		return PATTERN.matcher(expression).matches();
 	}
 
