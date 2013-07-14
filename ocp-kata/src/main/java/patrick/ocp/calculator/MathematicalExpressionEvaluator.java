@@ -1,4 +1,4 @@
-package patrick.ocp;
+package patrick.ocp.calculator;
 
 public interface MathematicalExpressionEvaluator {
 

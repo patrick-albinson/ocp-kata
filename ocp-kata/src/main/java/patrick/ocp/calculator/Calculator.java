@@ -1,4 +1,4 @@
-package patrick.ocp;
+package patrick.ocp.calculator;
 
 import java.util.ArrayList;
 import java.util.List;

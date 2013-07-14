@@ -1,8 +1,11 @@
-package patrick.ocp;
+package patrick.ocp.calculator;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import patrick.ocp.calculator.Calculator;
+import patrick.ocp.calculator.CalculatorFactory;
 
 public class CalculatorTest {
 

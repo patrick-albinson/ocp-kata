@@ -1,10 +1,10 @@
-package patrick.ocp.evaluators;
+package patrick.ocp.calculator.evaluator;
 
 import static java.lang.Integer.parseInt;
 
 import java.util.regex.Matcher;
 
-import patrick.ocp.MathematicalExpressionEvaluator;
+import patrick.ocp.calculator.MathematicalExpressionEvaluator;
 
 public abstract class AbstractDoubleOperandEvaluator implements MathematicalExpressionEvaluator {
 

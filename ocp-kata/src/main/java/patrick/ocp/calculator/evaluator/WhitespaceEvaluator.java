@@ -1,8 +1,8 @@
-package patrick.ocp.evaluators;
+package patrick.ocp.calculator.evaluator;
 
 import java.util.regex.Pattern;
 
-import patrick.ocp.MathematicalExpressionEvaluator;
+import patrick.ocp.calculator.MathematicalExpressionEvaluator;
 
 public class WhitespaceEvaluator implements MathematicalExpressionEvaluator {
 

@@ -1,11 +1,11 @@
-package patrick.ocp;
+package patrick.ocp.calculator;
 
-import patrick.ocp.evaluators.AdditionEvaluator;
-import patrick.ocp.evaluators.DivisionEvaluator;
-import patrick.ocp.evaluators.MultiplicationEvaluator;
-import patrick.ocp.evaluators.SingleOperandEvaluator;
-import patrick.ocp.evaluators.SubtractionEvaluator;
-import patrick.ocp.evaluators.WhitespaceEvaluator;
+import patrick.ocp.calculator.evaluator.AdditionEvaluator;
+import patrick.ocp.calculator.evaluator.DivisionEvaluator;
+import patrick.ocp.calculator.evaluator.MultiplicationEvaluator;
+import patrick.ocp.calculator.evaluator.SingleOperandEvaluator;
+import patrick.ocp.calculator.evaluator.SubtractionEvaluator;
+import patrick.ocp.calculator.evaluator.WhitespaceEvaluator;
 
 public class CalculatorFactory {
 
