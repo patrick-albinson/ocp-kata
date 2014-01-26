@@ -43,7 +43,7 @@ public class CalculatorTest {
 	@Test
 	public void treatingWhitespaceAsZero() {
 		Calculator calc = new CalculatorFactory().create();
-		assertEquals(0, calc.eval("   f"));
+		assertEquals(0, calc.eval("    "));
 	}
 
 }
