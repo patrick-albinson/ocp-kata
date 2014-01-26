@@ -4,16 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import patrick.ocp.calculator.Calculator;
-import patrick.ocp.calculator.CalculatorFactory;
-
 public class CalculatorTest {
-
-	@Test
-	public void treatingWhitespaceAsZero() {
-		Calculator calc = new CalculatorFactory().create();
-		assertEquals(0, calc.eval("    "));
-	}
 
 	@Test
 	public void doingNothing() {
@@ -29,10 +20,10 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void simpleSubtraction() {
+	public void simpleDivision() {
 		Calculator calc = new CalculatorFactory().create();
-		assertEquals(3, calc.eval("6 - 3"));
-		assertEquals(14, calc.eval("18 - 4"));
+		assertEquals(2, calc.eval("6 / 3"));
+		assertEquals(3, calc.eval("36 / 12"));
 	}
 
 	@Test
@@ -43,10 +34,16 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void simpleDivision() {
+	public void simpleSubtraction() {
 		Calculator calc = new CalculatorFactory().create();
-		assertEquals(2, calc.eval("6 / 3"));
-		assertEquals(3, calc.eval("36 / 12"));
+		assertEquals(3, calc.eval("6 - 3"));
+		assertEquals(14, calc.eval("18 - 4"));
+	}
+
+	@Test
+	public void treatingWhitespaceAsZero() {
+		Calculator calc = new CalculatorFactory().create();
+		assertEquals(0, calc.eval("   f"));
 	}
 
 }
